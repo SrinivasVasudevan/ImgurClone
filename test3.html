@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"> 
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+@font-face {
+    font-family: "myfont";
+    src: url("proxima-nova-regular.woff2") format('woff2');
+}
+body {
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li {
+  float: left;
+}
+
+ul {
+    
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    list-style-type:none;
+}
+#navbar {
+    background-color: #33353b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: bottom 0.3s;
+  height: 50px;
+
+box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+
+}
+
+ul a{
+text-decoration: none;
+color: #b4b9c2;
+ 
+}
+li{
+    color: #b4b9c2;
+    display: inline-block;
+    margin: auto 20px;
+    margin-top: 2px;
+    font-size: 13px;
+    vertical-align: middle;
+    font-family: myfont ;
+    letter-spacing: .5px;
+}
+@media only screen and (max-width: 1278px) {
+  .list1{
+    display: none;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .list2{
+    display: none;
+  }
+  
+}
+@media only screen and (max-width: 1500px) {
+  .list0{
+    display: none;
+  }
+  
+}
+@media only screen and (max-width: 670px) {
+  .listx{
+    display: none;
+  }
+  
+}
+.gettheapp
+  {
+    
+
+    background-color: #474a51;
+    display: flex;
+    min-width: 170px;
+   
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+    line-height: 50px;
+    font-weight: 700;
+    
+  }
+.gettheapp p{
+  
+  font-size: 13px;
+  color: #FFFFFF;
+  margin: 0px;
+  margin-left: -2px;
+  font-family: myfont ;
+    letter-spacing: .5px;
+  
+  
+}
+element.style {
+    top: 0px;
+}
+
+header{
+    display: flex;
+    align-self: center;
+}
+.Navbar{
+    display: inherit;
+    align-self: center;
+    
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2px;
+   
+}
+
+.Button {
+    text-align: center;
+    height: 35px;
+    display: inline-block;
+    padding: 7px 14px 10px 9px;
+    text-transform: none;
+    user-select: none;
+    touch-action: manipulation;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 700;
+    width: auto;
+    background-color: #1bb76e;
+    box-shadow: 0 6px 10px 0 rgb(27 28 30 / 31%);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.upload{
+    min-width: auto;
+    margin: auto 25px;
+    position: relative;
+   
+}
+
+
+a{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.EmeraldButton{
+    background: #6432f9;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
+    padding: 0 10px 0 9px;
+    overflow: hidden;
+    margin: auto 0;
+    line-height: 35px;
+}
+.Navbar-signin{
+    margin: auto 24px auto 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 14px 15px rgb(27 28 30 / 31%);
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.Navbar-signup{
+    background-color: rgb(27,183,110);
+    text-align: center;
+    border-radius: 3px;
+    height: 35px;
+    line-height: 35px;
+    width: auto;
+    min-width: 108px;
+    margin: auto 0;
+    padding: 0 10px 0 9px;
+    
+}
+
+.Searchbar-textInput, .Searchbar-submitInput{
+    border-radius: 3px;
+}
+.NavbarContainer-center, .NavbarContainer-left, .NavbarContainer-right{
+    position: relative;
+    display: inline-flex;
+}
+
+input{
+    font-family: Proxima Nova Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
+
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.Searchbar-textInput{
+    background: hsla(0,0%,100%,.25);
+    border: 1px solid transparent;
+    padding: 8px 35px 8px 10px;
+    border-radius: 3px;
+    width: 100%;
+    outline: 0 none;
+    opacity: .8;
+    min-height: 36px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: #fff;
+    text-shadow: inherit;
+    -webkit-text-fill-color: inherit;
+}
+
+.Searchbar-submitInput{
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    outline: 0 none;
+    padding: 8px;
+    cursor: pointer;
+}
+.NavbarNotifications{
+    display: inline-flex;
+    margin: auto 10px;
+}
+.newPostLabel{
+    display: block;
+    padding-left: 10px;
+ }
+ 
+ .upload{
+     display: flex;
+ }
+@media (max-width: 1200px)
+{
+.NavbarContainer-left {
+    min-width: 225px;
+}
+.upload{
+    margin-left: 35px;
+}
+
+.newPostLabel{
+    display: none;
+}
+
+}
+
+.InteractiveBackground{
+    top: 0px;
+    left: 0px;
+}
+.NavbarContainer-right{
+    justify-content: flex-end;
+}
+.Searchbar{
+    width: 100%;
+}
+.Message {
+    font-size: 24px;
+    font-family: Proxima Nova ExtraBold,Helvetica Neue,Helvetica,Arial,sans-serif;
+    letter-spacing: .6px;
+    color: #aed8ea;
+    text-align: center;
+    margin-top: 12px;
+    min-height: 34px;
+    position: relative;
+}
+.AdBanner{
+
+        color: #fff;
+        width: 95%;
+        max-width: 1072px;
+        min-height: 130px;
+        font-family: Proxima Nova Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
+        background-image: url(https://s.imgur.com/desktop-assets/desktop-assets/emerald-bg-star-banner.e124cd7….png);
+        background-position: 50%;
+        display: flex;
+        z-index: 0;
+        justify-content: space-between;
+        overflow: hidden;
+        border-radius: 4px;
+        background-size: cover;
+    
+}
+
+
+#header {
+   background-image: url('download.png');
+   background-repeat:no-repeat;
+   background-size: inherit;
+ 
+ 
+}
+body{
+  position: relative;
+}
+header{
+	position: sticky;
+	top: 0;
+  z-index: auto;
+}
+
+.HomeNavbar{
+  margin-top: 10px;
+  display: flex;
+  align-self: center;
+  width: 100%;
+
+}
+
+.card{
+  z-index: 100 !important; 
+}
+
+
+
+</style>
+<script>
+var imageUrl = 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota2_social.jpg' ;
+var imageTitles = 'Dota is a MOBA with over 120 heroes!';
+function populateCards()
+{
+
+var imageURLS = ["1sFmU22V5nVPihpJl2NILHQGOp8kMmhV2",
+"1sXmZjGYc-ALTLvukmc0BcCZ0G4a8Z4SL",
+"1tmfHTDz2UfsPsqxCPjskgJIZmRmL6TAv",
+"1svW6CzsRrCS19pffU8uOrm-ZNlIQ1Rob",
+"1suE_lHgHy8qrWCh6PsVdquPhe-TVwhcW",
+"1tv_kpK-10Z7vk6-toj0JFTdpfZncBTKR",
+"1tv0d1ygePOMQ1TOe5K4h1YzBi7S6c0Me",
+"1trJsMAcebJZQaPbwtSkMUGYc7gQfvG33",
+"1tnUTvoFm6cfpAPkClERxDtPx0VIleKon",
+"1tmhG1EbbHir-5hZ-SvXF4bQ0VtL07yOO",
+"1tmhE_Kn1ByhUZfyPZCOSU-33e5TUnI0s",
+"1tkswyfaSCRIGDpxHnoHFfcJwcnsv1Jpn",
+"1tkglnyWWOFSSeTIEKhTQQIi59yICUM39",
+"1tggttwsN3DpJJVrVG_pxCEHph9D3z8Sx",
+"1tZeuUQYAFb3SfuXZupUqLoJKG-jmykWQ",
+"1tZLoQJV3tjiSM5rOzJSd8gk4MsOWzySx",
+"1tRiw3RInXYO_WCix0uAVCYEo6VgELM5N",
+"1tP641mp7YuAnH-FP5GpgpYbAD21w1Q_J",
+"1tNHKkZ1Uc5je9G-iaOKbvfWky6Pv-Lx8",
+"1tMtE9kQ79ZSUaByr5YfTzbTYtC9Ow8HG",
+"1tDF4hKIQ8ElMThF5Sqp480Kxai3GgiVU",
+"1tCi9AQhyIWf5j3sRwPdZAOdhb0RZakil",
+"1tAHqLPOSiJvLXAqr0jR6VjFzBcirJ4wF",
+"1t3CA9FLIgNUeDkNc6EUYyCuISGQRlNpC",
+"1syuUIclbJuWb5uY12VYxTb6j3Ewj5Df8",
+"1swYOtAOB5MyKz82mqlf4q_zmG79Y0dyF",
+"1slwBst5xRwPD4VJj_AJm2yvuFgbpWh-_",
+"1shl1EeNmzpr37IBX9TIlXaf1xfljwKJc",
+"1sb0Er3zhxEUZrYnstdVEi5Fs9Wzgoe_9",
+"1tBhZcJ9Y9GPw0AmYjqJL6l2LiFVvbMF5",
+"1sXVXDtcigC5kSuLoElT6398Ep2Iau6R3",
+"1sW7w_AANroiZSU--RVA13ZdDtViemmej",
+"1sPRPHgjOA9I0ngC1wX8QIpp4qg7FMSbS",
+"1sw34xF-TuiVMrXwDnRZeOny8zmDqhg25",
+"1vTG8SfLkaLGJu-tmcPxMpUc3HF7G00jR",
+"1vQW_aHTM-eFgG9LyWtHgk_-aJ4Lqnv4-",
+"1sgRXrnmPK56TR8ymTDsGVP-7wmA2Go2L",
+"1tBpXOzo402dn7nhAe1VAWPj49D3aXbuC",
+"1twVy5zrUeo8P-8SFLZ6y0JuDza3WYR0L",
+"1sK1AhsSXIeuaGvU99RfpdxKKAfl5xuRa",
+"1sJUOtEBYx-madwXr2kHeqAJGs3OGS9uU",
+"1vFiQqCLPnCL2iM2axhlagSe292adkeUf",
+"1v2YZbOpLq9WMXnkt7RsC4XlGXC8qB5gL",
+"1uUmyd8w_v-KgUwWQSoG9uqIihqxG8XBb",
+"1v2Hx92JMlDdTPf062NXY30xwC1S7kLIT",
+"1um5IfuGj8VBWuCaqXJN-5J_Gs-PwL3DW",
+"1uhKKiJ_tByOGUBXmxsFTH0VYxzE4NQef",
+"1udCrb7RzWOhG-8XAFSeR-7FW7SXCGqru",
+"1ugUTByPbs_FRzKANHW2xwt-Kj28qh5yZ",
+"1ujUxCZaZUODliupcW-3FKlAp6bLccUUZ",
+"1ueXAWgFRZHV4yKbJK0ALF9gPPqXX8x99",
+"1u7vO78XJ39m2V3FJ37Bz3iCL_wqaL4tc",
+"1wIeI4bo1b5CyR2E2wU227UVsoiLAoZho",
+"1wH-2368Medr89k7m9cgRbgogZcMm9B0q",
+"1wGkGhrwGaIwfCW2y3mV_0T2ftpzwbK-M",
+"1wBMjCz468V60cFB_k0X8JMQgpnqITCD-",
+"1w9ZCiDwqS-n4OkFkRQxVoq2jtGpOh6YZ",
+"1w6lGQ6CZ-nBJlV3enZ6Zj7FkZKo_0HjN",
+"1w3d_i8u1xHd2oGz9QzSyJepJ9GVcZaP7",
+"1w0VEjowI97PqSyV9zeYnQe9e8OoOD0kZ",
+"1vziO7SADqxtZEaUdw-R9hNDOu4Svae5W",
+"1vticyPsnxSjncG0IRgbg9gkhsjW4dxVv",
+"1vtaUoPg1mZUbfh226jR6ZuDjwqXmxB23",
+"1vq2zQgQxk58cI_IdBo8erd5zWTrUmoVF",
+"1vcQG4d3wprmyLJ5pdrnzkf41nNWW1aT3",
+"1vXpDISRf0nTkXRm8fDwjkBgsSBa3nTSq",
+"1uxEePJL6_VzdwkfABGpn6mRo1rEzut3L",
+"1uqiyDW2NqNsEXLPatLR_VNrJmjySXRjL",
+"1uqNrVE_qxLCHX5Y84evJF6ZBP77-eZEy",
+"1um6fOf0H8JO1NLVP5OwKfRlQAoIbL8md",
+"1uNq4smH4YFevq6BPV-4w_NyOUh0PmnsY",
+"1uKhY7c-e4aXFc6knq0GZbHlH3fyrrtIb",
+"1u9Js7iVuyDR1i7HqsnmTCmWrY9ClRItE",
+"1u6G57UuN7vM3VkuAg1jDn4o6h_0zmZQJ",
+"1txzfhlo59DF3992gMbraY_hApp4VRosV",
+"1twHNr7vtH6bRkJD3prmirbppy7emo-rl",
+"1wJA_9VcMCkeP374hGbuzeA80tJ_Rhw1n",
+"1vo0JEOB2szT5YyS6_2MKrY7Hh6mfdGsz",
+"1vjU16VTbI4O0T1N2AjPYhtE9b3nnDPJQ",
+"1vgrULTlFZTzmuSNr0YyJBW-3Z6VrfOco",
+"1vMWZqv2PzmUFBgTDCuvWu7KLN-oMp2J5",
+"1elCtzvCrOaCn7qJV7FIKlhHwcIDmAs_U",
+"1ekpmrv2nPPmovHMpSbPeSPzm-uHAdh93",
+"1ef74sgK6IQOtuk95F53INsxJUuT3vMeS",
+"1eWnz3dWIyw7a6h9g4kZyQ6ofU65nY1k2",
+"1eSfuddg7t6Hi-cpDeQB43Nnq_O5lcG17",
+"1eSfuddg7t6Hi-cpDeQB43Nnq_O5lcG17",
+"1eOCETE31S1aQ3cd-9AQGUEV1mBOYHKJD",
+"1eGSC8gi629VKLsZUVHSi7wJu6czKjrYV",
+"1eCvdWnUb3H9oDlmmcbqCNxBZNwW5W-mj",
+"1eCvdWnUb3H9oDlmmcbqCNxBZNwW5W-mj",
+"1e8am-ns9YpiZMe71Nnac4UmgXl5S0_1-",
+"1eytm2bS8JQ3o-uctYj9Qe6hbUafqkPuO",
+"1f-FrMqFs6d60dTEWMlnwjs6pKvONtvU2",
+"1eu0k8n880enUOybIyF5gpJNyKKZSDqwA",
+"1fB3pdcZW3JGwK0no6X-ZZZTn6S0-91g-",
+"1anXyAlgLXkLMhFAXFntOYRD2M6LmFy1J",
+];
+
+for(var i=0;i<98;i++)
+{
+  var newElement = document.createElement("div");
+  newElement.innerHTML = '<div class="card" style="margin-top:10px; width: 100%; height: auto;background-color: #474a51; box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);"><img style=" border-radius: 5px 5px 0px 0px;" class="card-img-top" src='+"https://drive.google.com/uc?id="+imageURLS[i]+' alt="Card image cap"><div class="card-body"><h5 class="card-title" style="margin:6px;font-family: myfont; font-size: 14px; color: white;margin-bottom: 15px;"><strong>'+imageTitles+'</strong></h5><p style="margin:6px;margin-bottom:-1.3px;display: flex;justify-content: space-between; color: #b4b9c2; font-size: 13px; font-family: myfont ;"><span class="glyphicon glyphicon-arrow-up" style="margin-right: -10px;margin-left: 0px;"></span>69<span class="glyphicon glyphicon-comment"style="margin-right: -10px;margin-left: 10px;"></span>420<span class="glyphicon glyphicon-eye-open"style="margin-right: -10px;margin-left: 10px;"></span>420</p></div></div>';
+  document.getElementById("col"+String((i%5)+1)).appendChild(newElement);
+}
+
+// newElement.innerHTML = '<div class="card" style="margin-top:10px; width: 100%; height: auto;background-color: #474a51; box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);"><img style=" border-radius: 5px 5px 0px 0px;" class="card-img-top" src='+"https://drive.google.com/uc?export=view&id="+imageURL+' alt="Card image cap"><div class="card-body"><h5 class="card-title" style="margin:6px;font-family: myfont; font-size: 14px; color: white;margin-bottom: 15px;"><strong>'+imageTitles+'</strong></h5><p style="margin:6px;margin-bottom:-1.3px;display: flex;justify-content: space-between; color: #b4b9c2; font-size: 13px; font-family: myfont ;"><span class="glyphicon glyphicon-arrow-up" style="margin-right: -10px;margin-left: 0px;"></span>69<span class="glyphicon glyphicon-comment"style="margin-right: -10px;margin-left: 10px;"></span>420<span class="glyphicon glyphicon-eye-open"style="margin-right: -10px;margin-left: 10px;"></span>420</p></div></div>';
+// document.getElementById("col5").appendChild(newElement);
+}
+
+</script>
+</head>
+<body onload='populateCards()'>
+<div id="header" style="width:100%; height: 340px;margin: 0%; z-index: 500; ">
+  <header>
+    <div class="HomeNavbar">
+      <div class="Navbar NavbarContainer-left">
+        <div class="Navbar-logo-container">
+            <a aria-current="page" class="Navbar-logo active" href="#">
+                <svg width="94" height="34" viewBox="0 0 94 34" class="icon stroke fill" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <title>Imgur</title>
+                    <path d="M61.085 19.1569C61.085 23.9801 64.1422 26.5359 69.6448 26.5359C75.148 26.5359 78.2051 23.9801 78.2051 19.1569V12.4487C78.2051 9.98884 77.342 8.80659 75.3995 8.80659C73.4576 8.80659 72.5582 9.98884 72.5582 12.4487V18.1345C72.5582 20.4984 71.9469 21.8081 69.6448 21.8081C67.3433 21.8081 66.7314 20.4984 66.7314 18.1345V12.4487C66.7314 9.98884 65.8326 8.80659 63.9264 8.80659C61.9841 8.80659 61.085 9.98884 61.085 12.4487V19.1569Z" fill="#ffffff"></path>
+                    <path d="M86.8012 17.336C86.8012 15.6108 86.981 15.0039 88.5637 14.3332C89.1292 14.0977 89.7077 13.9104 90.2587 13.7321C91.9506 13.1844 93.3833 12.7206 93.3833 11.2023C93.3833 9.86081 92.0884 8.71123 90.5059 8.71123C89.175 8.71123 87.8441 9.28632 86.6572 10.4038C85.9738 9.31751 85.0747 8.80659 83.9599 8.80659C82.0176 8.80659 81.1185 9.98884 81.1185 12.4487V22.5745C81.1185 25.0344 82.0176 26.2484 83.9599 26.2484C85.9018 26.2484 86.8012 25.0344 86.8012 22.5745V17.336Z" fill="#ffffff"></path>
+                   
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M48.245 33.3078C52.2732 33.3078 55.2229 31.9981 56.877 29.5382C57.9919 27.9092 58.2077 25.6094 58.2077 22.5745V12.4487C58.2077 9.98884 57.3086 8.80659 55.3663 8.80659C54.5036 8.80659 53.4964 9.34959 52.8485 10.4038C51.6982 9.19008 50.2589 8.61499 48.317 8.61499C43.4974 8.61499 39.5052 12.4166 39.5052 17.5276C39.5052 22.6387 43.2456 26.2802 47.7057 26.2802C49.9351 26.2802 51.6262 25.4814 52.8485 23.9163C52.8485 24.0322 52.8582 24.1398 52.8675 24.2432C52.8762 24.339 52.8845 24.4313 52.8845 24.5234C52.8845 27.2705 51.2304 28.7718 48.4607 28.7718C46.6897 28.7718 45.3742 28.2995 44.3043 27.9153C43.5708 27.652 42.9527 27.43 42.3822 27.43C40.9796 27.43 39.9367 28.3565 39.9367 29.6342C39.9367 31.6152 43.0655 33.3078 48.245 33.3078ZM45.3676 17.5276C45.3676 15.0039 46.9864 13.4067 49.0726 13.4067C51.1583 13.4067 52.8125 15.0039 52.8125 17.5276C52.8125 20.0829 51.1944 21.7442 49.0726 21.7442C46.9506 21.7442 45.3676 20.1149 45.3676 17.5276Z" fill="#ffffff"></path>
+                    <path d="M31.5924 22.5745C31.5924 25.0344 32.4558 26.2484 34.3975 26.2484C36.34 26.2484 37.2388 25.0344 37.2388 22.5745V15.3553C37.2388 11.011 34.7573 8.74302 30.8371 8.74302C28.4996 8.74302 26.8446 9.41375 25.1184 11.1069C23.7877 9.54178 21.9172 8.74302 19.4717 8.74302C17.5655 8.74302 16.1268 9.25424 14.9396 10.4038C14.2563 9.31751 13.3575 8.80659 12.2426 8.80659C10.3 8.80659 9.40124 9.98884 9.40124 12.4487V22.5745C9.40124 25.0344 10.3 26.2484 12.2426 26.2484C14.1842 26.2484 15.0836 25.0344 15.0836 22.5745V16.8251C15.0836 14.3332 15.8753 13.0556 17.925 13.0556C19.7595 13.0556 20.4788 14.3332 20.4788 16.8887V22.5745C20.4788 25.0344 21.3776 26.2484 23.3202 26.2484C25.2624 26.2484 26.1615 25.0344 26.1615 22.5745V16.8251C26.1615 14.3332 26.9526 13.0556 29.0026 13.0556C30.8371 13.0556 31.5924 14.3332 31.5924 16.8887V22.5745Z" fill="#ffffff"></path>
+                    <path d="M6.23549 12.4487C6.23549 9.98884 5.33669 8.80659 3.43046 8.80659C1.48851 8.80659 0.589111 9.98884 0.589111 12.4487V22.5745C0.589111 25.0344 1.48851 26.2484 3.43046 26.2484C5.373 26.2484 6.23549 25.0344 6.23549 22.5745V12.4487Z" fill="#ffffff"></path>
+                    <path d="M3.51952 0.756104C1.58599 0.756104 0 2.1078 0 3.75626C0 5.43752 1.54695 6.7561 3.51952 6.7561C5.45305 6.7561 7 5.43752 7 3.75626C7 2.1078 5.45305 0.756104 3.51952 0.756104Z" fill="#1BB76E"></path>
+                </svg>
+                <svg width="94" height="34" style="display:inline; position:absolute; margin-left: 33px;" viewBox="0 0 94 34" class="icon stroke fill" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M61.085 22.1569C61.085 23.9801 64.1422 26.5359 69.6448 26.5359C75.148 26.5359 78.2051 23.9801 78.2051 19.1569V12.4487C78.2051 9.98884 77.342 8.80659 75.3995 8.80659C73.4576 8.80659 72.5582 9.98884 72.5582 12.4487V18.1345C72.5582 20.4984 71.9469 21.8081 69.6448 21.8081C67.3433 21.8081 66.7314 20.4984 66.7314 18.1345V12.4487C66.7314 9.98884 65.8326 8.80659 63.9264 8.80659C61.9841 8.80659 61.085 9.98884 61.085 12.4487V19.1569Z" fill="#ffffff"></path>
+                </svg>
+
+            </a>
+        </div>
+        <a class="Button upload" href="#">
+            <img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.13ab64f9f36ad8f25ae3544b350e2ae1.svg">
+            <span class="newPostLabel">New post</span>
+        </a>
+    </div>
+    <div class="Navbar NavbarContainer-center">
+        <form class="Searchbar">
+            <input type="text" class="Searchbar-textInput"  placeholder="Images, #tags, @users oh my!">
+            <button type="submit" class="Searchbar-submitInput">
+                <img class="search" src="https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg">
+            </button>
+        </form>
+    </div>
+    <div class="Navbar NavbarContainer-right">
+        <div class="NavbarNotifications">
+            <a title="Top Comments" href="/leaderboard">
+                <svg width="32" height="32" viewBox="0 -2 34 34" class="uScaleTransition ProfileNavbar-item" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <title>Comment Leaderboard</title>
+                    <g fill="none" fill-rule="evenodd">
+                        <path d="M0 0h32v32H0z"></path>
+                        <g transform="translate(6.5 3)" stroke="#ffffff" stroke-width="2">
+                            <path d="M4 16.977v7.076l5.5-2.481 5.5 2.481v-7.076l-5.5 1.245L4 16.977z"></path>
+                            <circle cx="9.5" cy="9.5" r="8.5"></circle>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+        <a class="EmeraldButton Button" href="/emerald?source=getAdFreeButtonTopNav">Go Ad-Free</a>
+            <a class="Navbar-signin" href="https://imgur.com/signin?redirect=%2F">Sign in</a>
+            <a class="ButtonLink Button Navbar-signup" title="Sign up" href="https://imgur.com/register?redirect=%2F">Sign up</a>
+    </div>
+
+    </div>
+    
+
+    <!-- <div class="InteractiveBackground" style="position: absolute;">
+        <img src="../download.png">
+    </div> -->
+    
+</header>
+<div class="Message welcome">Life is short. Smile while you still have teeth.</div>
+<div class="AdBanner">
+   <div class="AdBanner-left"></div>
+   <div class="AdBanner-center">
+
+        <span class="content">This is where the content goes</span>
+   </div>
+   <div class="AdBanner-right"></div>
+</div>
+</div>
+<div id="navbar" class="Footer" style="z-index: 1000;">
+    <ul><li style="margin-left: 3.7px;"><strong>© 2021 Imguru, Inc</strong></li>
+        <li class="listx"><a href="https://imgur.com/about">About</a></li>
+        <li class="listx"><a href="/emerald?source=footer">Emerald</a></li>
+        <li class="listx"><a href="https://imgurinc.com/press">Press</a></li>
+        <li class="list2"><a href="https://blog.imgur.com">Blog</a></li>
+        <li class="list2"><a href="https://imgur.com/privacy">Privacy</a></li>
+        <li class="list2"><a href="https://imgur.com/ccpa">CCPA</a></li>
+        <li class="list2"><a href="https://imgur.com/tos">Terms</a></li>
+        <li class="list1"><a href="https://imgur.com/tos">Advertise</a></li>
+        <li class="list1"><a href="https://imgur.com/tos">Ad Choices</a></li>
+        <li class="list1"><a href="https://imgur.com/tos">Rules</a></li>
+        <li class="list0"><a href="https://imgur.com/tos">Help</a></li>
+        <li class="list0"><a href="https://imgur.com/tos">Careers</a></li>
+        <li class="list0"><a href="https://imgur.com/tos">Store</a></li>
+        
+    </ul>
+    <div style="float: right;">
+    <div  style="float: left;
+    padding-top: 8px; 
+    margin-right: 24px;
+    color: #b4b9c2;"><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-points.5867bfb88971853dcfdf49b18f8455b9.svg" width="32px" height="32px" style="opacity: 0.6;">
+</div>
+    <div class="gettheapp" style="float: left;"><p>Get the App</p></div>
+  </div>
+</div>
+<div style="display: flex;justify-content: center;vertical-align: baseline;background-color: #2e3035;width: 100%;height: auto;   ">
+  <div class="container"  style="margin-top: -60px;">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-lg col-lf-offset-0" id="col1" style="padding: 10px; z-index: 800; margin-top: 0px; ">
+        <div class="card" style="width: 100%; height: auto; background-color: #474a51;    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%); border-radius: 6px;">
+          <img style=" border-radius: 5px 5px 0px 0px;" class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/91XbVDNaGPL._RI_.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="margin:6px;font-family: myfont; font-size: 14px; color: white;margin-bottom: 15px;"><strong>MegaloBox Season 2: Nomad announced!</strong></h5>
+            
+           <p style="margin:6px;margin-bottom:-1.3px;display: flex;justify-content: space-between; color: #b4b9c2; font-size: 13px; font-family: myfont ;"><span class="glyphicon glyphicon-arrow-up" style="margin-right: -10px;margin-left: 0px;"></span>69<span class="glyphicon glyphicon-comment"style="margin-right: -10px;margin-left: 10px;"></span>420<span class="glyphicon glyphicon-eye-open"style="margin-right: -10px;margin-left: 10px;"></span>420</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-lg col-lf-offset-0" id="col2" style="padding: 10px;z-index: 800; margin-top: 0px;">
+        <div class="card" style="width: 100%; height: auto;background-color: #474a51; box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);border-radius: 6px;">
+          <img style=" border-radius: 5px 5px 0px 0px;" class="card-img-top" src="https://i.pinimg.com/474x/ac/32/e8/ac32e8227d3c047e484a1e575f5ba2c9.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="margin:6px;font-family: myfont; font-size: 14px; color: white;margin-bottom: 15px;"><strong>One Piece chapter 1009. Luffy lands a blow on kaido!</strong></h5>
+            
+           <p style="margin:6px;margin-bottom:-1.3px;display: flex;justify-content: space-between; color: #b4b9c2; font-size: 13px; font-family: myfont ;"><span class="glyphicon glyphicon-arrow-up" style="margin-right: -10px;margin-left: 0px;"></span>69<span class="glyphicon glyphicon-comment"style="margin-right: -10px;margin-left: 10px;"></span>420<span class="glyphicon glyphicon-eye-open"style="margin-right: -10px;margin-left: 10px;"></span>420</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-lg col-lf-offset-0" id="col3" style="padding: 10px;z-index: 800; margin-top: 0px;">
+        <div class="card" style="width: 100%; height: auto;background-color: #474a51; box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);border-radius: 6px;">
+          <img style=" border-radius: 5px 5px 0px 0px;" class="card-img-top" src="https://www.hitc.com/static/uploads/2020/05/jujutsu-kaisen-sukuna-anime-1221458-1280x0-1.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="margin:6px;font-family: myfont; font-size: 14px; color: white;margin-bottom: 15px;"><strong>Ramen Suguna noober</strong></h5>
+            
+           <p style="margin:6px;margin-bottom:-1.3px;display: flex;justify-content: space-between; color: #b4b9c2; font-size: 13px; font-family: myfont ;"><span class="glyphicon glyphicon-arrow-up" style="margin-right: -10px;margin-left: 0px;"></span>69<span class="glyphicon glyphicon-comment"style="margin-right: -10px;margin-left: 10px;"></span>420<span class="glyphicon glyphicon-eye-open"style="margin-right: -10px;margin-left: 10px;"></span>420</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-lg col-lf-offset-0" id="col4" style="padding: 10px;z-index: 800; margin-top: 0px;">
+        <div class="card" style="width: 100%; height: auto;background-color: #474a51; box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);border-radius: 6px;" >
+          <img style=" border-radius: 5px 5px 0px 0px;" class="card-img-top" src="https://i.ytimg.com/vi/LLLMgEYjKGk/maxresdefault.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="margin:6px;font-family: myfont; font-size: 14px; color: white;margin-bottom: 15px;"><strong>Kakegurui Mashou!</strong></h5>
+            
+           <p style="margin:6px;margin-bottom:-1.3px;display: flex;justify-content: space-between; color: #b4b9c2; font-size: 13px; font-family: myfont ;"><span class="glyphicon glyphicon-arrow-up" style="margin-right: -10px;margin-left: 0px;"></span>69<span class="glyphicon glyphicon-comment"style="margin-right: -10px;margin-left: 10px;"></span>420<span class="glyphicon glyphicon-eye-open"style="margin-right: -10px;margin-left: 10px;"></span>420</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-lg col-lf-offset-0" id="col5" style="padding: 10px;z-index: 800; margin-top: 0px;">
+        <div class="card" style="width: 100%; height: auto;background-color: #474a51; box-shadow: 0 2px 4px 0 rgb(0 0 0 / 40%);border-radius: 6px;">
+          <img style=" border-radius: 5px 5px 0px 0px;" class="card-img-top" src="https://drive.google.com/uc?export=view&id=1sFmU22V5nVPihpJl2NILHQGOp8kMmhV2" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="margin:6px;font-family: myfont; font-size: 14px; color: white;margin-bottom: 15px;"><strong>Noober Boober Killjoy Boober</strong></h5>
+            
+           <p style="margin:6px;margin-bottom:-1.3px;display: flex;justify-content: space-between; color: #b4b9c2; font-size: 13px; font-family: myfont ;"><span class="glyphicon glyphicon-arrow-up" style="margin-right: -10px;margin-left: 0px;"></span>69<span class="glyphicon glyphicon-comment"style="margin-right: -10px;margin-left: 10px;"></span>420<span class="glyphicon glyphicon-eye-open"style="margin-right: -10px;margin-left: 10px;"></span>420</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   
+    
+  </div>
+
+
+<script>
+var a = window.pageYOffset;
+window.onscroll = function() {
+var b = window.pageYOffset;
+  if ( b==0)
+   {
+document.getElementById("navbar").style.bottom = "0";
+  } 
+  else 
+  {
+document.getElementById("navbar").style.bottom = "-50px";
+  }
+  a = b;
+}
+</script>
+
+
+</body>
+</html>
