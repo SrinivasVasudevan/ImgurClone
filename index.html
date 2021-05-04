@@ -440,13 +440,15 @@ header{
     flex: 1 1 300px;
 }
 
-@media (max-width: 700px){}
+@media (max-width: 700px){
 .EmeraldBanner-rightBlock .imgEmeraldHero {
     width: 109px;
 }}
 .EmeraldBanner-rightBlock .imgEmeraldHero {
     width: 195px;
     object-fit: contain;
+    height: 80px;
+    margin-left: -50px;
 }
 
 @media (max-width: 700px){
@@ -529,7 +531,14 @@ header{
     z-index: 1;
     flex: 1 1 300px;
 }
+.troll-comment{
+  display: inline-block;
+  margin-left: -50px;
+  letter-spacing: 0.2em;
+  font-weight: bolder;
 
+  
+}
 </style>
 <script>
 var imageUrl = 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota2_social.jpg' ;
@@ -648,7 +657,7 @@ for(var i=0;i<imageURLS.length;i++)
         <path d="M61.085 19.1569C61.085 23.9801 64.1422 26.5359 69.6448 26.5359C75.148 26.5359 78.2051 23.9801 78.2051 19.1569V12.4487C78.2051 9.98884 77.342 8.80659 75.3995 8.80659C73.4576 8.80659 72.5582 9.98884 72.5582 12.4487V18.1345C72.5582 20.4984 71.9469 21.8081 69.6448 21.8081C67.3433 21.8081 66.7314 20.4984 66.7314 18.1345V12.4487C66.7314 9.98884 65.8326 8.80659 63.9264 8.80659C61.9841 8.80659 61.085 9.98884 61.085 12.4487V19.1569Z" fill="#ffffff"></path> 
       </svg>
     </div>
-    <div><img class="imgEmeraldHero" src="https://s.imgur.com/desktop-assets/desktop-assets/icon-emerald-hero.01efdc1ccdadae307801b620cfa17756.png"></div>
+    <div class="herald"><img class="imgEmeraldHero" src="Herald.png"><span class="troll-comment">Living the herald life</span></div>
   </div>
 </a>
     
